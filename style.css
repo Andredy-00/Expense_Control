@@ -79,11 +79,13 @@ body {
   text-decoration: none;
   overflow: hidden;
   transition: .5s;
-  margin-top: 40px;
-  letter-spacing: 4px
+  letter-spacing: 4px;
+  background-color: transparent;
+  border: none;
 }
 
 .login-box .enviarformulario:hover {
+  cursor: pointer;
   background: #03e9f4;
   color: #fff;
   border-radius: 5px;
@@ -185,8 +187,10 @@ body {
   letter-spacing: 2px;
 }
 
-.login-box form .registro:hover {
-    
-}
+
+
+
+
+
 
 

@@ -4,32 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense Control</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
 
     <div class="login-box">
       <h2>Registrarme</h2>
-      <form>
+      <form action="registros.php" method="post">
         <div class="user-box">
-            <input type="text" name="" required="">
+            <input type="text" name="nombrecompleto" required="">
             <label>Nombre Completo</label>
           </div>
         <div class="user-box">
-          <input type="text" name="" required="">
+          <input type="text" name="email" required="">
           <label>Correo</label>
         </div>
         <div class="user-box">
-          <input type="password" name="" required="">
+          <input type="password" name="clave" required="">
           <label>Contraseña</label>
         </div>
         <div class="box-btnenviar">
-          <a type="submit" name="enviarformulario" id="enviarformulario" class="enviarformulario">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Registrarme
-          </a>
+
+            <button type="submit" id="btn-registro" class="enviarformulario">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Registrarme
+            </button>
         </div>
         <div class="box-registro">
           <a href="index.html" class="registro">
@@ -41,6 +43,5 @@
     </div>
 
     
-   <script type="module" src="main.js"></script>
   </body>
 </html>
