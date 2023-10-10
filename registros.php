@@ -14,19 +14,29 @@
     }
 
     if( $_SERVER['REQUEST_METHOD'] === 'POST'){
-        
+
         $nombreCompleto = $_POST['nombrecompleto'];
         $email = $_POST['email'];
         $clave = $_POST['clave'];
 
-        $sql = "INSERT INTO registros_sesion (nombre_completo, email, clave)
-         VALUES ('$nombreCompleto', '$email', '$clave')";
+        $validarEmail = $conexion -> query("SELECT * FROM registros_sesion WHERE email='$email'");
+        $claveEmcriptada = md5($clave);
+        if( $validarEmail -> num_rows > 0 ){
+            
+            echo "El correo ya se encuentra en uso";
 
-         if( $conexion -> query($sql)){
-            echo "Registro Exitoso";
-         }else {
-            echo "Registro Fallido";
-         }
+        }else{
+            $sql = "INSERT INTO registros_sesion (nombre_completo, email, clave)
+            VALUES ('$nombreCompleto', '$email', '$claveEmcriptada')";
+   
+            if( $conexion -> query($sql)){
+               echo "Registro Exitoso";
+               header('location: index.html');
+               exit;
+            }else {
+               header('location: registro.html');
+            }
+        }
 
     }
 
