@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/estiloslogin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Expense Control</title>
   </head>
   <body>
 
     <div class="login-box">
+     
       <h2>Iniciar sesión</h2>
-      <form action="iniciosesion.php" method="post">
+      <form action="php/iniciosesion.php" method="post">
         <div class="user-box">
           <input type="text" name="email" required="">
           <label>Usuario</label>
@@ -25,13 +27,14 @@
             <span></span>
             <span></span>
             <span></span>
-            Iniciar
+            Ingresar
           </button>
         </div>
+        <div class="box-pass">
+          <a href="views/verificaremail.html" class="pass">¿Olvidaste tu Contraseña?</a>
+        </div>
         <div class="box-registro">
-          <a href="registro.html" class="registro">
-            ¿Ya te registraste?
-          </a>
+          <a class="registroB">¿No tienes Cuenta?<a href="views/registro.html" class="registro">Registrate</a></a>
         </div>
 
       </form>

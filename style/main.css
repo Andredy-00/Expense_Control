@@ -1,0 +1,58 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    padding: 1%;
+    background: linear-gradient(#141e30, #243b55);
+}
+
+.main {
+    background-color: #1F1F1F;
+    height: 85vh;
+}
+
+/* Formulario */
+.login-box {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    /* background: rgba(0,0,0,.5); */
+    /* box-sizing: border-box; */
+    /* box-shadow: 0 15px 25px rgba(0,0,0,.6); */
+    /* border-radius: 10px; */
+  }
+
+.inp-box{
+    position: relative;
+}
+
+.inp-box input {
+    width: 40%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 50px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.inp-box label {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    padding: 10px 0;
+    font-size: 12px;
+    color: #03e9f4;
+}

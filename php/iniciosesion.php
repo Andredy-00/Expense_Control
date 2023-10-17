@@ -21,9 +21,9 @@
         $validarClave = $conexion -> query("SELECT * FROM registros_sesion WHERE clave='$clave'");
 
         if( $validarEmail -> num_rows > 0 && $validarClave -> num_rows > 0 ){
-            header('location: main.html');
+            header('location: ../views/main.html');
         }else{
-            header('location: index.html');
+            header('location: ../views/index.html');
         }
     }
 

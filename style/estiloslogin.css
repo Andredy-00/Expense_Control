@@ -5,7 +5,10 @@ body {
   margin:0;
   padding:0;
   font-family: sans-serif;
-  background: linear-gradient(#141e30, #243b55);
+  background: rgb(210,217,213);
+  background-image: url(../img/fondo.png);
+  background-repeat: no-repeat;
+  background-size:cover;
 }
 
 .login-box {
@@ -15,7 +18,8 @@ body {
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.5);
+  background: transparent;
+  backdrop-filter: blur(20px);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
@@ -24,7 +28,7 @@ body {
 .login-box h2 {
   margin: 0 0 30px;
   padding: 0;
-  color: #fff;
+  color: black;
   text-align: center;
 }
 
@@ -36,10 +40,10 @@ body {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
-  color: #fff;
+  color: black;
   margin-bottom: 50px;
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid black;
   outline: none;
   background: transparent;
 }
@@ -49,7 +53,7 @@ body {
   left: 0;
   padding: 10px 0;
   font-size: 16px;
-  color: #fff;
+  color: black;
   pointer-events: none;
   transition: .5s;
 }
@@ -58,12 +62,12 @@ body {
 .login-box .user-box input:valid ~ label {
   top: -20px;
   left: 0;
-  color: #03e9f4;
+  color: red;
   font-size: 12px;
 }
 
 /* Botones */
-.box-btnenviar, .box-registro{
+.box-btnenviar, .box-registro, .box-pass{
   width: 100%;
   display:flex;
   justify-content: center;
@@ -74,25 +78,26 @@ body {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  color: #03e9f4;
+  color: red;
   font-size: 16px;
   text-decoration: none;
   overflow: hidden;
   transition: .5s;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   background-color: transparent;
   border: none;
+  margin-bottom: 25px;
 }
 
 .login-box .enviarformulario:hover {
   cursor: pointer;
-  background: #03e9f4;
+  background: red;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4,
-              0 0 25px #03e9f4,
-              0 0 5px #03e9f4,
-              0 0 5px #03e9f4;
+  box-shadow: 0 0 5px red,
+              0 0 25px red,
+              0 0 5px red,
+              0 0 5px red;
 }
 
 .login-box .enviarformulario span {
@@ -105,7 +110,7 @@ body {
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #03e9f4);
+  background: linear-gradient(90deg, transparent, red);
   animation: btn-anim1 1s linear infinite;
 }
 
@@ -123,7 +128,7 @@ body {
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent, #03e9f4);
+  background: linear-gradient(180deg, transparent, red);
   animation: btn-anim2 1s linear infinite;
   animation-delay: .25s
 }
@@ -142,7 +147,7 @@ body {
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent, #03e9f4);
+  background: linear-gradient(270deg, transparent, red);
   animation: btn-anim3 1s linear infinite;
   animation-delay: .5s
 }
@@ -161,7 +166,7 @@ body {
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg, transparent, #03e9f4);
+  background: linear-gradient(360deg, transparent, red);
   animation: btn-anim4 1s linear infinite;
   animation-delay: .75s
 }
@@ -175,22 +180,19 @@ body {
   }
 }
 
-.login-box form .registro {
+.registroB, .pass {
   position: relative;
   display: inline-block;
-  padding: 10px 20px;
-  color: #03e9f4;
-  font-size: 14px;
+  padding: 5px 10px;
+  color: black;
+  font-size: 12px;
   text-decoration: none;
   overflow: hidden;
-  margin-top: 15px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
-
-
-
-
-
-
-
+.registro {
+  text-decoration: none;
+  color: red;
+  font-size: 15px;
+}

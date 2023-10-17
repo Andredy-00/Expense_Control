@@ -30,11 +30,10 @@
             VALUES ('$nombreCompleto', '$email', '$claveEmcriptada')";
    
             if( $conexion -> query($sql)){
-               echo "Registro Exitoso";
-               header('location: index.html');
+               header('location: ../views/index.html');
                exit;
             }else {
-               header('location: registro.html');
+               header('location: ../views/registro.html');
             }
         }
 
